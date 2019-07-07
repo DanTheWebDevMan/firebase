@@ -1,0 +1,54 @@
+body {
+    width: 80%;
+    margin: 3% auto;
+    background-color:silver;
+    background-image: url(https://cupop.columbia.edu/drupal/cupc/files/imce_shared/iStock_000003790235XSmall.jpg);
+}
+
+.jumbotron {
+    background-color:rgb(51 122 183);
+    padding: 48px;
+}
+
+p {
+    text-align: center;
+    color: white;
+}
+
+.display-4 {
+    text-align: center;
+    color: white;
+}
+
+.section-head {
+    color:white;
+    background-color:rgb(51 122 183);
+    padding:10px;
+    font-weight:bold;
+}
+
+.contentbox {
+    border-radius: 5px;
+    border: 2px solid gray;
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom:10px;
+}
+
+.form-group {
+    margin: 15px;
+}
+
+.form-control {
+    margin-left: 15px;
+    margin-right:50px;
+    margin-bottom:10px;
+}
+label {
+    margin-bottom:10px;
+    margin-top: 10px;
+}
+
+button {
+    margin: 10px;
+}
