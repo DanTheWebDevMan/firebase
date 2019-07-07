@@ -1,13 +1,12 @@
 body {
     width: 80%;
     margin: 3% auto;
-    background-color:silver;
     background-image: url(https://cupop.columbia.edu/drupal/cupc/files/imce_shared/iStock_000003790235XSmall.jpg);
 }
 
 .jumbotron {
     background-color:rgb(51 122 183);
-    padding: 48px;
+    padding: 24px;
 }
 
 p {
@@ -25,6 +24,7 @@ p {
     background-color:rgb(51 122 183);
     padding:10px;
     font-weight:bold;
+    text-align: center;
 }
 
 .contentbox {
