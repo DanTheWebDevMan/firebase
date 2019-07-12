@@ -19,6 +19,7 @@
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
 
 
     <title>HW 7: Firebase</title>
@@ -44,36 +45,31 @@
                 <th scope="col">Minutes Away</th>
             </tr>
             </thead>
-            <tbody id="tbody">
-                <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                 
-                </tr>
-                <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                 
-                </tr>
-                <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+            <div class="card-body">
+                <!--Display current/running time here using moment Js-->
+                <h5>Current time: <span id="current-time"></span></h5>
+                <table class="table table-hover table-responsive-md">
+                  <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Train name <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="The name of the train."></i></th>
+
+                        <th scope="col">Destination <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="The location to where the train is traveling to. For example, Chicago, IL."></i></th>
+
+                        <th scope="col">Frequency (min) <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="How often (in minutes) the train leaves."></i></th>
+
+                        <th scope="col">Next arrival <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="The time the next train will arrive at the destination."></i></th>
+
+                        <th scope="col">Minutes away <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="The number of minutes until the next train is expected to arrive at the destination."></i></th>
+                    </tr>
+                  </thead>
+                  <tbody id="schedule-body">
+                  </tbody>
+                </table>
+        </div>
     </div>
+</div>
+</div>
 
 
     <div class="contentbox">
@@ -91,7 +87,7 @@
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2">First Train Time (HH:mm - military time)</label>
-                <input type="text" class="form-control" id="timeInput" >
+                <input type="text" class="form-control" id="firstTrainInput" >
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2">Frequency (min)</label>
@@ -101,6 +97,7 @@
         <div class="col-auto my-1">
             <button type="submit" class="btn btn-primary add-row" id="submit">Submit</button>
         </div>
+        <p id="missing-field" class="form-validation"></p>
     </div>
 
 
