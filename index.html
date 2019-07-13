@@ -30,52 +30,45 @@
         <h1 class="display-4">Anytime is Train Time!</h1>
         <br>
         <p class="lead">Choo Choo Ca-Choo</p>
-      </div>
+    </div>
+
     <div class="contentbox">
         <div class="section-head">
             Current Trains
         </div>
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th scope="col">Train Name</th>
-                <th scope="col">Destination</th>
-                <th scope="col">Frequency (min)</th>
-                <th scope="col">Next Arrival</th>
-                <th scope="col">Minutes Away</th>
-            </tr>
-            </thead>
-            <div class="card-body">
-                <!--Display current/running time here using moment Js-->
+        <div class="section-body">
+            <table class="table table-striped" id="trainTable">
+                <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+                </thead>
+                <tbody>   
+                </tbody>
+            </table>
+        </div>
+        
+            <!-- <div class="card-body">
+                Display current/running time here using moment Js
                 <h5>Current time: <span id="current-time"></span></h5>
                 <table class="table table-hover table-responsive-md">
                   <thead>
-                    <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Train name <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="The name of the train."></i></th>
-
-                        <th scope="col">Destination <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="The location to where the train is traveling to. For example, Chicago, IL."></i></th>
-
-                        <th scope="col">Frequency (min) <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="How often (in minutes) the train leaves."></i></th>
-
-                        <th scope="col">Next arrival <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="The time the next train will arrive at the destination."></i></th>
-
-                        <th scope="col">Minutes away <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="The number of minutes until the next train is expected to arrive at the destination."></i></th>
-                    </tr>
-                  </thead>
                   <tbody id="schedule-body">
                   </tbody>
-                </table>
-        </div>
+                </table> -->
+        
     </div>
-</div>
-</div>
 
 
     <div class="contentbox">
         <div class="section-head">
             Add Train
         </div>
+
         <form>
             <div class="form-group">
                 <label for="formGroupExampleInput">Train Name</label>
@@ -94,15 +87,16 @@
                 <input type="text" class="form-control" id="freqInput" >
             </div>
         </form>
+
         <div class="col-auto my-1">
             <button type="submit" class="btn btn-primary add-row" id="submit">Submit</button>
         </div>
-        <p id="missing-field" class="form-validation"></p>
     </div>
 
 
 
-
+    <!-- Moment.js Reference -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <script src="assets/javascript/app.js"></script>
     
 </body>
