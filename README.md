@@ -1,6 +1,8 @@
 
  https://dannielzelaya.github.io/firebase/.
  
+ https://danthewebdevman.github.io/firebase/
+ 
 # firebase
 
 ### Overview
